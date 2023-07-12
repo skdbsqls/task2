@@ -51,13 +51,13 @@ export default function Product({ products }) {
               value={option}
               onChange={handleOption}
             >
-              <option>선택하세요.</option>
+              {/* "선택하세요."는 띄우지 않깅! */}
+              <option value={""}>선택하세요.</option>
               {product.options.map((option) => (
                 <option value={option}>{option}</option>
               ))}
             </select>
-            {/* "선택하세요."는 띄우지 않깅! */}
-            <div>구매옵션 : {option !== "선택하세요." ? option : ""}</div>
+            <div>구매옵션 : {option}</div>
           </div>
         </div>
       </div>
